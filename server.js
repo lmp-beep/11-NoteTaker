@@ -24,7 +24,7 @@ app.use(express.json());
 
  
 // Routes
-app.get('*', function (request, response) {
+app.get('/', function (request, response) {
     response.sendFile(path.join(__dirname, './public/index.html'))
 });
 
@@ -38,7 +38,6 @@ app.get('/api/notes', function (request, response) {
 
 
 
-
 // Add a new note
 // app.post('/api/notes.html', function (request, response) {
     // const newNote = 
@@ -48,7 +47,6 @@ app.get('/api/notes', function (request, response) {
 // })
 
 
- 
 app.listen(PORT)
 
 
