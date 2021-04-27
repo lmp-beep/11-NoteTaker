@@ -7,7 +7,7 @@ const uniqid = require('uniqid'); //npm process to create unique id's
 // const fs = require('fs');
 
 // JSON Database
-let database = require('./Develop/db/db.json');
+let database = require('./db/db.json');
 
 // Empty array for data to get pushed into
 // let data = [];
@@ -24,17 +24,18 @@ app.use(express.json());
 
  
 // Routes
-app.get('/', function (request, response) {
-    response.sendFile(path.join(__dirname, './Develop/public/index.html'))
+app.get('*', function (request, response) {
+    response.sendFile(path.join(__dirname, './public/index.html'))
 });
 
-app.get('/notes.html', function (request, response) {
-    response.sendFile(path.join(__dirname, './Develop/public/notes.html'))
+app.get('/notes', function (request, response) {
+    response.sendFile(path.join(__dirname, './public/notes.html'))
 });
 
-app.get('/api/notes.html', function (request, response) {
+app.get('/api/notes', function (request, response) {
     response.json(database)
 });
+
 
 
 
