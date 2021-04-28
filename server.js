@@ -1,16 +1,12 @@
 
 // Dependencies
-const { response } = require('express');
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const uniqid = require('uniqid'); //npm process to create unique id's
-// const fs = require('fs');
 
-// JSON Database
+// JSON Database as a variable
 let database = require('./db/db.json');
-
-// Empty array for data to get pushed into
-// let data = [];
 
 // Sets up Express App
 const app = express();
@@ -21,8 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// ----------------------------------------------------------------------------
 
- 
 // Routes
 app.get('/', function (request, response) {
     response.sendFile(path.join(__dirname, './public/index.html'))
@@ -36,15 +32,29 @@ app.get('/api/notes', function (request, response) {
     response.json(database)
 });
 
+// ----------------------------------------------------------------------------
+
+// Post a new note
+app.post('/api/notes', function (request, response) {
+        let jsonPath = path.join(__dirname, '/db/db.json');
+        let newNote = {
+                    id: uniqid.process(),
+                    title: request.body.title,
+                    text: request.body.text,
+                }
+
+        database.push(newNote)
+        fs.writeFile(jsonPath, JSON.stringify(database), function (err) {
+            if (err) {
+                return console.log(err);
+            }
+            console.log("Success! Added a new note!")
+        });
+        response.json(newNote);
+    });
 
 
-// Add a new note
-// app.post('/api/notes.html', function (request, response) {
-    // const newNote = 
 
-//     database.push(newNote);
-//     response.json(database);
-// })
 
 
 app.listen(PORT)
