@@ -7,6 +7,7 @@ const uniqid = require('uniqid'); //npm process to create unique id's
 
 // JSON Database as a variable
 let database = require('./db/db.json');
+// let database = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
 
 // Sets up Express App
 const app = express();
@@ -48,12 +49,34 @@ app.post('/api/notes', function (request, response) {
             if (err) {
                 return console.log(err);
             }
-            console.log("Success! Added a new note!")
+            console.log("Added a new note!")
         });
         response.json(newNote);
     });
 
+// ----------------------------------------------------------------------------
 
+// Delete an existing note
+app.delete("/api/notes/:id", (request, response) => {
+    let noteId = request.params.id
+    let jsonPath = path.join(__dirname, '/db/db.json');
+
+    if (noteId) {
+      database = database.filter(function(note) {
+          return note.id != request.params.id;
+      })
+      response.json();
+    } else {
+      response.status(400).json();
+    }
+
+    fs.writeFile(jsonPath, JSON.stringify(database), function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Deleted note!");
+    });
+  });
 
 
 
