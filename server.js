@@ -7,7 +7,6 @@ const uniqid = require('uniqid'); //npm process to create unique id's
 
 // JSON Database as a variable
 let database = require('./db/db.json');
-// let database = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
 
 // Sets up Express App
 const app = express();

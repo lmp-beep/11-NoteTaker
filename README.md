@@ -39,8 +39,8 @@ This is an application called Note Taker that can be used to write and save note
 ## Usage
 1. Through the integrated terminal in VS Code, run `node server.js`.
   2. Open a new browser page and go to `http://localhost:8080`.
-  3. Click the `GetStarted` button.
-  4. Type the title of your note in the `Note Title` placeholder, and type the text of your note in the `Note Text` placeholder.
+  3. Click the GetStarted button.
+  4. Type the title of your note in the Note Title placeholder, and type the text of your note in the Note Text placeholder.
   5. Click the save icon in the top right corner and your note will be added to the list on the left. 
   6. Click on a note title in the list to the left to view a saved note.
   7. Click on the delete icon next to a note to delete it.
@@ -49,6 +49,7 @@ This is an application called Note Taker that can be used to write and save note
 <br/><br/>
 
 ## Example Images
-
+![Screen Shot 2021-04-28 at 1 43 32 PM](https://user-images.githubusercontent.com/77073582/116449352-15a19000-a828-11eb-8945-ddfcc6acee1f.png)
+![Screen Shot 2021-04-28 at 1 43 56 PM](https://user-images.githubusercontent.com/77073582/116449369-1a664400-a828-11eb-8b48-758c10c51edf.png)
 
 ***
