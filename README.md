@@ -12,6 +12,11 @@ This is an application called Note Taker that can be used to write and save note
 ***
 <br/><br/>
 
+## Deployed
+Live Site: https://lmp-notetaker.herokuapp.com/
+***
+<br/><br/>
+
 ## Table of Contents
 >* [License](#license)
 >* [Installation](#installation)
@@ -24,7 +29,6 @@ This is an application called Note Taker that can be used to write and save note
   Copyright © Lisa Pessin 2021  
   This application is covered under the MIT License.  
   For more information, visit https://opensource.org/licenses/MIT.
-
   ***
   <br/><br/>
 
@@ -33,7 +37,6 @@ This is an application called Note Taker that can be used to write and save note
   2. Open in Visual Studios Code.
   3. Through the terminal in VS Code, run `npm install` to install the included dependencies.
   ***
-
 <br/><br/>
 
 ## Usage
@@ -44,12 +47,10 @@ This is an application called Note Taker that can be used to write and save note
   5. Click the save icon in the top right corner and your note will be added to the list on the left. 
   6. Click on a note title in the list to the left to view a saved note.
   7. Click on the delete icon next to a note to delete it.
-
   ***
 <br/><br/>
 
 ## Example Images
 ![Screen Shot 2021-04-28 at 1 43 32 PM](https://user-images.githubusercontent.com/77073582/116449352-15a19000-a828-11eb-8945-ddfcc6acee1f.png)
 ![Screen Shot 2021-04-28 at 1 43 56 PM](https://user-images.githubusercontent.com/77073582/116449369-1a664400-a828-11eb-8b48-758c10c51edf.png)
-
 ***
