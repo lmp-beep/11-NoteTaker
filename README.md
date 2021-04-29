@@ -4,7 +4,7 @@
 <br/><br/>
 
 <p align="center">
-<img src="https://img.shields.io/badge/License-MIT-yellow.svg"/>
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg" href="https://opensource.org/licenses/MIT" target="blank" />
 </p>
 
 ## Description
@@ -13,7 +13,9 @@ This is an application called Note Taker that can be used to write and save note
 <br/><br/>
 
 ## Deployed
-Live Site: https://lmp-notetaker.herokuapp.com/
+Live site deployed through Heroku.
+
+<a href="https://lmp-notetaker.herokuapp.com/" target="_blank">lmp-notetaker.herokuapp.com</a>
 ***
 <br/><br/>
 
@@ -28,7 +30,7 @@ Live Site: https://lmp-notetaker.herokuapp.com/
 ## License
   Copyright © Lisa Pessin 2021  
   This application is covered under the MIT License.  
-  For more information, visit https://opensource.org/licenses/MIT.
+  For more information, visit <a href="https://opensource.org/licenses/MIT" target="blank">opensource.org/licenses/MIT.</a>
   ***
   <br/><br/>
 
