@@ -10,7 +10,7 @@ let database = require('./db/db.json');
 
 // Sets up Express App
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
 app.use(express.static(path.join(__dirname, 'public')));
