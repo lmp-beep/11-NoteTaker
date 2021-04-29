@@ -10,6 +10,8 @@ let database = require('./db/db.json');
 
 // Sets up Express App
 const app = express();
+
+// PORT must be flexible for Heroku to work. If PORT is hard coded, the app won't run.
 const PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
